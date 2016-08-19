@@ -4,9 +4,14 @@ $(document).ready(function() {
   var countUp = function(number) {
       var numbers = [];
       var arrayOutput = [];
-      for (var i = 0; i < number - 1; i++) {
+      for (var i = 0; i <= number - 1; i++) {
         if ((i + 1) % 15 === 0) {
           arrayOutput[i] = "Ping...PONG!";
+        } else if ((i + 1) % 5 === 0) {
+          arrayOutput[i] = "Pong.";
+        }
+          else if ((i + 1) % 3 === 0) {
+            arrayOutput[i] = "Ping!";
         } else {
           arrayOutput[i] = [1 + i];
         }
