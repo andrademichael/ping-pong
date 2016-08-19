@@ -13,12 +13,10 @@
 2. Replaces multiples of 15 with one string, multiples of 5 with another, and multiples of 3 with another.
   e.g. for input 15, changes the original array [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15] into [1, 2, ping, 4, pong, ping, 7, 8, ping, pong, 11, ping, 13, 14, ping-pong]
 3. Displays the results in a list on the page, along with commentary.
-  e.g. input 3 results in:  \*1
-                            \*2
-                            \*ping
+  e.g. input 3 results in: ⦁1 ⦁2 ⦁ping
 4. The user can enter new numbers in the box and get fresh lists without refreshing the page.
-  e.g. After inputting 3, inputting 2 results in:   \*1
-                                                    \*2
+  e.g. After inputting 3, inputting 2 results in: ⦁1 ⦁2
+
 ## Description
 
 This page will take a whole number input, and display a list of the numbers from one to the input. That list will have all multiples of three replaced by the string "ping.", multiples of five replaced by "pong!", and multiples of fifteen instead replaced with "ping...PONG!".
