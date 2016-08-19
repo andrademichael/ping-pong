@@ -18,7 +18,11 @@ $(document).ready(function() {
     //   for (var i = 0; i < (output).length; i++) {
     // $("#outputDisplay").text(output[i]);
     //   }
-    $("#outputDisplay").text(output);
+    for (var i = 0; i < output.length; i++) {
+      $("#outputList").append("<li>" + output[i] + "</li>");
+};
+    $("#outputSentence").text("Ok, here's the serve with " + inputNum + " volleys!");
+    $("#outputRhetoric").text("Isn't this an exciting game?")
     $("#num").text(inputNum);
     console.log("main thing ran with input " + inputNum);
     };
