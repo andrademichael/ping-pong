@@ -1,4 +1,33 @@
 $(document).ready(function() {
+//Backend
+
+  var countUp = function(number) {
+      var numbers = [];
+      var arrayOutput = [];
+      for (var i = 0; i < number - 1; i++) {
+        if ((i + 1) % 15 === 0) {
+          arrayOutput[i] = "Ping...PONG!";
+        } else {
+          arrayOutput[i] = [1 + i];
+        }
+      }
+      console.log(numbers);
+      return arrayOutput;
+      console.log("countUp ran");
+    };
+
+  // var pingPonger = function(arrayInput) {
+  //   var arrayOutput = arrayInput.slice(0);
+  //   console.log(arrayInput);
+  //   for (var i = 0; i < arrayInput.length; i++) {
+  //     if (arrayInput[i] % 15 === 0) {
+  //       arrayOutput[i] = "ping...PONG!";
+  //     } elseif {
+  //
+  //     }
+  //   }
+  //   return arrayOutput;
+  // };
 
 //Frontend
   $("#inputForm").submit(function(event) {
@@ -14,37 +43,15 @@ $(document).ready(function() {
       $("#inputHelp").text("...Please, enter a whole number?");
       console.log(inputNum);
     } else {
-      var output = pingPonger(inputNum);
-    //   for (var i = 0; i < (output).length; i++) {
-    // $("#outputDisplay").text(output[i]);
-    //   }
-    for (var i = 0; i < output.length; i++) {
-      $("#outputList").append("<li>" + output[i] + "</li>");
-};
-    $("#outputSentence").text("Ok, here's the serve with " + inputNum + " volleys!");
-    $("#outputRhetoric").text("Isn't this an exciting game?")
-    $("#num").text(inputNum);
-    console.log("main thing ran with input " + inputNum);
+        var output = countUp(inputNum);
+        $("#outputList").text("");
+        for (var i = 0; i < output.length; i++) {
+          $("#outputList").append("<li>" + output[i] + "</li>");
+        };
+        $("#outputSentence").text("Ok, here's the serve with " + inputNum + " volleys!");
+        $("#outputRhetoric").text("Isn't this an exciting game?")
+        $("#num").text(inputNum);
+        console.log("form submit ran with input " + inputNum);
     };
   });
-
-//Backend
-
-  var countUp = function(number) {
-      var numbers = [];
-      for (var i = 0; i < number; i++) {
-        numbers.push(1 + i);
-      }
-      return numbers;
-      console.log("countUp ran");
-      console.log(numbers);
-    };
-
-  var pingPonger = function(arrayInput) {
-    return countUp(arrayInput);
-    // if((single int being passed from array)% 3 === 0) {
-    //   (sibpfa) = "ping."
-    //   return that;
-    // }
-  };
 });
