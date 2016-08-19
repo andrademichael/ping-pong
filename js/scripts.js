@@ -1,19 +1,38 @@
 $(document).ready(function() {
 
 //Frontend
-  $("form").submit(function(event) {
+  $("#inputForm").submit(function(event) {
     $("div").removeClass("has-error");
     event.preventDefault();
-    var input = $("#nameInput").val();
-    var output = answerParser(input);
+    $("#inputBox").removeClass("has-error");
+    $("#inputHelp").text("");
+
+    var inputNum = parseInt($("#inputBox").val());
+    var pingParser = function(pingInput) {
+
+    };
+    if(!inputNum) {
+      $("#inputBox").addClass("has-error");
+      $("#inputHelp").text("...Please, enter a whole number?");
+      console.log(inputNum);
+    } else {
+      var output = pingParser(inputNum);
+
+    $("#outputDisplay").show;
+    console.log("main thing ran");
+    };
+  });
 
 //Backend
-  var answerParser = function(name)
-  if(!name) {
-    $("#numBox").addClass("has-error");
-    $("#numHelp").text("Please enter a whole number");
-  } else {
+  var answerParser = function(name) {
+  //
+  // var func = function() {
+  //
+  // };
+  // if((single int being passed from array)% 3 === 0) {
+  //    (sibpfa) = "ping."
+  //    return that
 
-  }
-  });
+  // };
+  };
 });
